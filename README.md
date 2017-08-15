@@ -6,7 +6,7 @@ Unofficial Guitar Pro 6 docker image for linux
 ```
 docker pull aviggiano/guitar-pro-6
 xhost +local:root
-docker run -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -it aviggiano/guitar-pro-6 /opt/GuitarPro/launch.sh
+docker run -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -it aviggiano/guitar-pro-6
 ```
 
 ## References
