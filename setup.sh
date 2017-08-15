@@ -25,5 +25,5 @@ apt-get install -y -f
 dpkg -i gp6.deb
 
 # Start guitar pro
-# cd /opt/GuitarPro6/
-# sh launcher.sh
+cd /opt/GuitarPro6/
+sh launcher.sh
