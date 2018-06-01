@@ -18,3 +18,7 @@ RUN dpkg -i gp6.deb || true
 RUN apt-get install -y -f
 # Retry install
 RUN dpkg -i gp6.deb
+
+ENV PULSE_SERVER /run/pulse/native
+CMD /opt/GuitarPro6/launcher.sh
+
