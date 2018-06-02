@@ -24,6 +24,9 @@ docker start gp6-01
 
 ## Recipes
 
+Here are some frequent usages conveniently packaged in scripts.
+Wrap them in your own script with the path parameters that are good your you.
+
 #### Basic usage with only one host, no RSE
 
  - use `01_run_standalone.sh` script to create a container called `gp6-01` in your host
@@ -53,7 +56,7 @@ docker start gp6-01
 
 #### Option : Portable installation usable on several hosts
 
- - while `gp6-01` is started, execute `05_save_user_files.sh $PWD` to get from container user files containing your own preferences and credentials (replace $PWD by any place you want to save your files to)
+ - while `gp6-01` is started, execute `05_save_user_files.sh $PWD` to get from container user files containing your own preferences and credentials (again, replace $PWD by any place you want to save your files to)
  - moves the generated folders ($PWD/home.config and $PWD/home.ArobasMusic) to another host
  - execute on the other host `06_run_with_user_files.sh PATH/TO/SAVED/FOLDER` : Guitar Pro is executed without asking for credentials again
  - you may even `docker rm gp6-01` on your first host and always use `06_run_with_user_files.sh $PWD` to start Guitar Pro with your credentials
@@ -64,11 +67,13 @@ docker start gp6-01
  - if you are using several hosts, you may want to share your .gpx files too
  - add them to a cloud shared drive (nextcloud, owndrive, dropbox, google drive, ... )
  - mount it as a volume by adding `-v /PATH/TO/DRIVE:/root/drive` to your run script
+ - of course, you can mount any local drive like this, not necessarily a cloud one
 
 
-#### Do it all
+#### Do it all  : Full portable installation
 
- - use `07_run_full.sh` to have Soundbanks folder, user files, and drive mounted
+ - get soundbanks and user files from previous sections and store them as your "installation files" (e.g on a pendrive)
+ - use `07_run_full.sh` on any docker host to have a full GuitarPro6 ready to use with Soundbanks folder, user files, and drive mounted
 
 
 ## References

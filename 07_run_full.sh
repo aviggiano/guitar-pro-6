@@ -2,7 +2,7 @@
 
 if [ "$#" -ne 3 ]; then
   echo 	"Illegal number of parameters
-Usage:	04_run_full.sh GP_USER_PATH DRIVE_PATH GP_DATA_PATH "
+Usage:	07_run_full.sh GP_USER_PATH DRIVE_PATH GP_DATA_PATH "
   exit 1
 fi
 
@@ -15,7 +15,7 @@ GP_DATA_PATH="$3"
 USER_UID=$(id -u)
 
 docker run --rm \
-	--name gppro6 \
+	--name gp6-07 \
 	-e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix/ \
 	--device /dev/snd \
 	-v /run/user/$USER_UID/pulse:/run/pulse:ro \
