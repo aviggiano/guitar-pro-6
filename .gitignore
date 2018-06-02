@@ -1,0 +1,12 @@
+
+# local files
+Data
+Dropbox
+UserPath
+
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
