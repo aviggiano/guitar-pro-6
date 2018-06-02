@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
-xhost +local:root
+if [ "$#" -ne 1 ]; then
+  echo 	"Illegal number of parameters
+Usage:	02_save_user_files.sh GP_USER_PATH"
+  exit 1
+fi
 
 GP_USER_PATH="$1"
 
